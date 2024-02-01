@@ -1,12 +1,27 @@
 Package: stickers
-Title: What the Package Does (One Line, Title Case)
+Title: Hex Stickers for R Packages
 Version: 0.0.0.9000
 Authors@R: 
     person("John", "Benninghoff", , "jbenninghoff@mac.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6230-4742"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: Source code used to generate Hex Stickers for my R packages.
+License: MIT + file LICENSE
+URL: https://jabenninghoff.github.io/stickers/,
+    https://github.com/jabenninghoff/stickers
+BugReports: https://github.com/jabenninghoff/stickers/issues
+Suggests: 
+    desc,
+    devtools,
+    fs,
+    knitr,
+    pkgload,
+    rdev (>= 1.9.5),
+    rmarkdown,
+    testthat (>= 3.0.0),
+    usethis
+Remotes: 
+    jabenninghoff/rdev
+Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
