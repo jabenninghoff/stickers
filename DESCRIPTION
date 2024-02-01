@@ -12,9 +12,12 @@ BugReports: https://github.com/jabenninghoff/stickers/issues
 Suggests: 
     desc,
     devtools,
+    dplyr,
     fs,
     knitr,
+    pkgdown,
     pkgload,
+    purrr,
     rdev (>= 1.9.5),
     rmarkdown,
     testthat (>= 3.0.0),
