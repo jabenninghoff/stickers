@@ -11,10 +11,19 @@
 
 ## Overview
 
-**What the Package Does (One Line, Title Case):** What the package does
-(one paragraph).
+**Hex Stickers for R Packages:** Source code used to generate Hex
+Stickers for my R packages.
 
 Feel free to use and/or fork this project!
+
+## Notebooks
+
+Notebooks in this package:
+
+- [Hex Stickers](https://jabenninghoff.github.io/stickers/stickers.html)
+  (2023-02-01): Source code used to generate Hex Stickers for my R
+  packages, using
+  [hexSticker](https://github.com/GuangchuangYu/hexSticker).
 
 ## Installation
 
@@ -37,11 +46,3 @@ renv::install("jabenninghoff/stickers")
 
 - Changelog: See “Changelog” or `NEWS.md`.
 - Planned: [TODO](TODO.md)
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-# basic example code
-```
