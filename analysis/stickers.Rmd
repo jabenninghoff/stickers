@@ -1,0 +1,65 @@
+---
+title: "Hex Stickers"
+author: "John Benninghoff"
+date: '2023-02-01'
+file-modified: '2023-02-01'
+categories: [stickers]
+order: 101
+output:
+  html_notebook:
+    theme:
+      version: 5
+      preset: bootstrap
+    css: assets/extra.css
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+---
+
+Source code used to generate Hex Stickers for my R packages, using [hexSticker](https://github.com/GuangchuangYu/hexSticker).
+
+Requires imageMagick, run: `brew install imagemagick`.
+
+```{r setup, message = FALSE, warning = FALSE}
+library(hexSticker)
+library(showtext)
+```
+
+I used <https://github.com/ryansafner/hexstickers> as a reference to help get started with
+hexStickers.
+
+# rdev
+
+Sticker for [rdev](https://jabenninghoff.github.io/rdev/).
+
+Uses a modified version of the Wikimedia Commons
+[Infinity in circle](https://commons.wikimedia.org/wiki/File:Infinity_in_circle.svg) symbol to
+represent [DevOps](https://en.wikipedia.org/wiki/DevOps_toolchain). The fill color is
+[OSHA safety yellow](https://hextoral.com/hex-color/eac234/federal-std-595c/).
+
+```{r rdev}
+font_add_google("Lato")
+# TODO: understand why setting dpi = 600 and not dpi = 1200 correctly sizes the font
+showtext_opts(dpi = 600)
+
+sticker(
+  "assets/infinity.png",
+  s_x = 1,
+  s_y = 0.7,
+  s_width = 0.5,
+  s_height = 0.5,
+  package = "rdev",
+  p_color = "black",
+  p_family = "Lato",
+  p_size = 28,
+  h_fill = "#EAC234",
+  h_color = "black",
+  filename = "rendered/rdev.png",
+  dpi = 1200
+)
+```
+
+Rendered file:
+
+![](rendered/rdev.png)
