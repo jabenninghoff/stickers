@@ -4,9 +4,9 @@
 \name{stickers-package}
 \alias{stickers}
 \alias{stickers-package}
-\title{stickers: What the Package Does (One Line, Title Case)}
+\title{stickers: Hex Stickers for R Packages}
 \description{
-What the package does (one paragraph).
+Source code used to generate Hex Stickers for my R packages.
 }
 \seealso{
 Useful links:
