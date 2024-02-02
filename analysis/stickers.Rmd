@@ -79,7 +79,7 @@ The background of the sticker is a line plot with three colors using the
 ```{r jbplot_v1}
 a <- c(1, 2, 3, 4, 5, 4, 5, 6, 7, 8)
 
-subplot <- data.frame(
+jbplot_v1 <- data.frame(
   observation = 1:10,
   group_a = a - 1,
   group_b = a + 1,
@@ -97,7 +97,7 @@ subplot <- data.frame(
   theme_quo()
 
 sticker(
-  subplot,
+  jbplot_v1,
   s_x = 1,
   s_y = 1,
   s_width = 2,
@@ -117,3 +117,45 @@ sticker(
 Rendered file:
 
 ![](rendered/jbplot_v1.png)
+
+While this version is OK, it's strangely unsatisfying.
+
+## Second Version
+
+The second version uses a jbplot
+[`ggplot_donut()`](https://jabenninghoff.github.io/jbplot/reference/ggplot_donut.html) plot with the
+[viridis](https://sjmgarnier.github.io/viridis/) color map.
+
+```{r jbplot}
+bg <- "white"
+jbplot <- data.frame(group = c("A", "B", "C"), n = c(4, 3, 2), stringsAsFactors = FALSE) |>
+  ggplot_donut(hsize = 4) +
+  scale_fill_viridis_d() +
+  guides(fill = "none") +
+  theme(
+    plot.background = element_rect(fill = bg, linewidth = 0),
+    plot.margin = grid::unit(c(0, 0, 0, 0), "lines")
+  )
+
+sticker(
+  jbplot,
+  s_x = 0.983,
+  s_y = 0.7,
+  s_width = 0.9,
+  s_height = 0.9,
+  package = "jbplot",
+  p_color = "gray25",
+  p_family = "Lato",
+  p_size = 22,
+  h_fill = bg,
+  h_color = "gray50",
+  filename = "rendered/jbplot.png",
+  dpi = 1200
+)
+```
+
+Rendered file:
+
+![](rendered/jbplot.png)
+
+The second version is more satisfying.
