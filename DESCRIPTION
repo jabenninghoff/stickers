@@ -14,7 +14,9 @@ Suggests:
     devtools,
     dplyr,
     fs,
+    ggplot2,
     hexSticker,
+    jbplot,
     knitr,
     pkgdown,
     pkgload,
@@ -24,6 +26,7 @@ Suggests:
     showtext,
     spelling,
     testthat (>= 3.0.0),
+    tidyr,
     usethis,
     withr
 Remotes: 

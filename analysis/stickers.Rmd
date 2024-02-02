@@ -24,6 +24,9 @@ Requires imageMagick, run: `brew install imagemagick`.
 ```{r setup, message = FALSE, warning = FALSE}
 library(hexSticker)
 library(showtext)
+library(tidyr)
+library(ggplot2)
+library(jbplot)
 ```
 
 I used <https://github.com/ryansafner/hexstickers> as a reference to help get started with
@@ -63,3 +66,54 @@ sticker(
 Rendered file:
 
 ![](rendered/rdev.png)
+
+# jbplot
+
+Sticker for [jbplot](https://jabenninghoff.github.io/jbplot/).
+
+## First Version
+
+The background of the sticker is a line plot with three colors using the
+[viridis](https://sjmgarnier.github.io/viridis/) color map.
+
+```{r jbplot_v1}
+a <- c(1, 2, 3, 4, 5, 4, 5, 6, 7, 8)
+
+subplot <- data.frame(
+  observation = 1:10,
+  group_a = a - 1,
+  group_b = a + 1,
+  group_c = a + 3
+) |>
+  pivot_longer(!observation, names_to = "group") |>
+  ggplot(aes(x = observation, y = value, color = group)) +
+  geom_line() +
+  geom_point() +
+  labs(x = NULL, y = NULL) +
+  guides(color = "none") +
+  scale_x_continuous(labels = NULL) +
+  scale_y_continuous(limits = c(-1, 12), labels = NULL) +
+  scale_color_viridis_d() +
+  theme_quo()
+
+sticker(
+  subplot,
+  s_x = 1,
+  s_y = 1,
+  s_width = 2,
+  s_height = 2.15,
+  package = "jbplot",
+  p_color = "gray50",
+  p_family = "Lato",
+  p_size = 24,
+  h_fill = "white",
+  h_color = "black",
+  white_around_sticker = TRUE,
+  filename = "rendered/jbplot_v1.png",
+  dpi = 1200
+)
+```
+
+Rendered file:
+
+![](rendered/jbplot_v1.png)
