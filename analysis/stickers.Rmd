@@ -2,7 +2,7 @@
 title: "Hex Stickers"
 author: "John Benninghoff"
 date: '2023-02-01'
-file-modified: '2023-02-01'
+file-modified: '2023-02-02'
 categories: [stickers]
 order: 101
 output:
@@ -197,3 +197,36 @@ sticker(
 Rendered file:
 
 ![](rendered/cards.png)
+
+# stickers
+
+Stickers image built with the `hexwall`
+[script](https://github.com/mitchelloharawild/hexwall/blob/f3e67a968d972bf6bc86923f0985ded464b7b8cd/hexwall.R).
+Because `hexwall()` uses a white background, the sticker background is also white. The border and
+title are [Royal Blue](https://color-register.org/color/royal-blue).
+
+```r
+hexwall("analysis/rendered", sticker_row_size = 2)
+```
+
+```{r}
+sticker(
+  "assets/hexwall.png",
+  s_x = 1,
+  s_y = 0.625,
+  s_width = 0.4,
+  s_height = 0.4,
+  package = "stickers",
+  p_color = "#2B60DE",
+  p_family = "Lato",
+  p_size = 18,
+  h_fill = "white",
+  h_color = "#2B60DE",
+  filename = "rendered/stickers.png",
+  dpi = 1200
+)
+```
+
+Rendered file:
+
+![](rendered/stickers.png)
