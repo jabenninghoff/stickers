@@ -1,3 +1,9 @@
+# stickers 1.2.0
+
+* Adds source code for generating [cards](https://jabenninghoff.github.io/cards/) sticker
+
+* Increase size of donut plot in [jbplot](https://jabenninghoff.github.io/jbplot/) sticker
+
 # stickers 1.1.0
 
 * Adds source code for generating [jbplot](https://jabenninghoff.github.io/jbplot/) sticker
