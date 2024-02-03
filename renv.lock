@@ -857,13 +857,13 @@
     },
     "jbplot": {
       "Package": "jbplot",
-      "Version": "1.4.1",
+      "Version": "1.4.2",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteUsername": "jabenninghoff",
       "RemoteRepo": "jbplot",
       "RemoteRef": "main",
-      "RemoteSha": "f1f0ad71a16edb73ef454ed4c34dd771236795d4",
+      "RemoteSha": "31b0f50d3d2b06f1f45ab7eca8dae62c1dfdcb4f",
       "RemoteHost": "api.github.com",
       "Remotes": "jabenninghoff/rdev",
       "Requirements": [
@@ -873,7 +873,7 @@
         "rlang",
         "scales"
       ],
-      "Hash": "b4f79eb0a1c5aa911d43673a9c1fc68c"
+      "Hash": "770430ebc433cb2c1d2832f866087daf"
     },
     "jquerylib": {
       "Package": "jquerylib",
