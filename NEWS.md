@@ -4,6 +4,8 @@
 
 * Increase size of donut plot in [jbplot](https://jabenninghoff.github.io/jbplot/) sticker
 
+* Adds source code for generating "stickers" sticker
+
 # stickers 1.1.0
 
 * Adds source code for generating [jbplot](https://jabenninghoff.github.io/jbplot/) sticker

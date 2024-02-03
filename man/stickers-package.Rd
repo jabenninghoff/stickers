@@ -6,6 +6,8 @@
 \alias{stickers-package}
 \title{stickers: Hex Stickers for R Packages}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Source code used to generate Hex Stickers for my R packages.
 }
 \seealso{
