@@ -127,27 +127,24 @@ The second version uses a jbplot
 [viridis](https://sjmgarnier.github.io/viridis/) color map.
 
 ```{r jbplot}
-bg <- "white"
 jbplot <- data.frame(group = c("A", "B", "C"), n = c(4, 3, 2), stringsAsFactors = FALSE) |>
   ggplot_donut(hsize = 4) +
   scale_fill_viridis_d() +
   guides(fill = "none") +
-  theme(
-    plot.background = element_rect(fill = bg, linewidth = 0),
-    plot.margin = grid::unit(c(0, 0, 0, 0), "lines")
-  )
+  theme_transparent() +
+  theme(plot.background = element_rect(linewidth = 0))
 
 sticker(
   jbplot,
   s_x = 0.983,
-  s_y = 0.7,
-  s_width = 0.9,
-  s_height = 0.9,
+  s_y = 0.6,
+  s_width = 1.1,
+  s_height = 1.1,
   package = "jbplot",
   p_color = "gray25",
   p_family = "Lato",
   p_size = 22,
-  h_fill = bg,
+  h_fill = "white",
   h_color = "gray50",
   filename = "rendered/jbplot.png",
   dpi = 1200
