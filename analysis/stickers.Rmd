@@ -159,3 +159,44 @@ Rendered file:
 ![](rendered/jbplot.png)
 
 The second version is more satisfying.
+
+# cards
+
+Sticker for [cards](https://jabenninghoff.github.io/cards/). Uses ggplot2 text annotations with
+[unicode card suits](https://en.wikipedia.org/wiki/Playing_cards_in_Unicode). The background is
+[Poker Green](https://color-register.org/color/poker-green) and the border is
+[Dark Wood](https://color-register.org/color/dark-wood).
+
+```{r cards}
+c_size <- 9
+cards <- ggplot() +
+  annotate("text", x = 1, y = 0, label = "A\u2663", size = c_size) +
+  annotate("text", x = 2, y = 0, label = "A\u2666", size = c_size, color = "red") +
+  annotate("text", x = 3, y = 0, label = "A\u2665", size = c_size, color = "red") +
+  annotate("text", x = 4, y = 0, label = "A\u2660", size = c_size) +
+  annotate("text", x = 5, y = 0, label = "K\u2663", size = c_size) +
+  scale_x_continuous(limits = c(0.25, 5.75)) +
+  theme_void() +
+  theme_transparent()
+
+sticker(
+  cards,
+  s_x = 1,
+  s_y = 0.65,
+  s_width = 2,
+  s_height = 2,
+  package = "cards",
+  p_y = 1.2,
+  p_color = "#FFFFFF",
+  p_family = "Lato",
+  p_size = 22,
+  h_fill = "#35654D",
+  h_color = "#855E42",
+  filename = "rendered/cards.png",
+  dpi = 1200
+)
+```
+
+Rendered file:
+
+![](rendered/cards.png)
