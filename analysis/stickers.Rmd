@@ -77,13 +77,13 @@ The background of the sticker is a line plot with three colors using the
 [viridis](https://sjmgarnier.github.io/viridis/) color map.
 
 ```{r jbplot_v1}
-a <- c(1, 2, 3, 4, 5, 4, 5, 6, 7, 8)
+j_series <- c(1, 2, 3, 4, 5, 4, 5, 6, 7, 8)
 
 jbplot_v1 <- data.frame(
   observation = 1:10,
-  group_a = a - 1,
-  group_b = a + 1,
-  group_c = a + 3
+  group_a = j_series - 1,
+  group_b = j_series + 1,
+  group_c = j_series + 3
 ) |>
   pivot_longer(!observation, names_to = "group") |>
   ggplot(aes(x = observation, y = value, color = group)) +
