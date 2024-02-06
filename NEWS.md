@@ -1,3 +1,7 @@
+# stickers 1.2.1
+
+* Maintenance updates
+
 # stickers 1.2.0
 
 * Adds source code for generating [cards](https://jabenninghoff.github.io/cards/) sticker
