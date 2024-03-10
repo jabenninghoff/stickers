@@ -1,3 +1,7 @@
+# stickers 1.2.3
+
+* Maintenance updates
+
 # stickers 1.2.2
 
 * Maintenance updates
