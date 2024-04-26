@@ -1,3 +1,7 @@
+# stickers 1.2.5
+
+* Updated for R 4.4.0
+
 # stickers 1.2.4
 
 * Maintenance updates
