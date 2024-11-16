@@ -199,6 +199,38 @@ Rendered file:
 
 ![](rendered/cards.png)
 
+# quantrr
+
+Sticker for [quantrr](https://jabenninghoff.github.io/quantrr/). Features an uppercase "Q" in the
+[Metropolis](https://www.1001fonts.com/metropolis-font.html) font, rendered as a `.png` since
+Metropolis isn't in Google Fonts. Blue Q, orange text, with a dark gray border and light gray
+background.
+
+```{r quantrr}
+pal <- jbplot::differently_palettes$primary
+
+sticker(
+  "assets/q-logo.png",
+  s_x = 1,
+  s_y = 1.3,
+  s_width = 0.5,
+  s_height = 0.5,
+  package = "quantrr",
+  p_y = 0.7,
+  p_color = pal[["orange"]],
+  p_family = "Lato",
+  p_size = 24,
+  h_fill = pal[["lightgray"]],
+  h_color = pal[["darkgray"]],
+  filename = "rendered/quantrr.png",
+  dpi = 1200
+)
+```
+
+Rendered file:
+
+![](rendered/quantrr.png)
+
 # stickers
 
 Stickers image built with the `hexwall`
@@ -210,7 +242,7 @@ title are [Royal Blue](https://color-register.org/color/royal-blue).
 hexwall("analysis/rendered", sticker_row_size = 2)
 ```
 
-```{r}
+```{r stickers}
 sticker(
   "assets/hexwall.png",
   s_x = 1,
