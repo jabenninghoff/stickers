@@ -1,3 +1,7 @@
+# stickers 1.3.0
+
+* Adds source code for generating [quantrr](https://jabenninghoff.github.io/quantrr/) sticker
+
 # stickers 1.2.5
 
 * Updated for R 4.4.0
