@@ -219,7 +219,7 @@ sticker(
   p_y = 0.7,
   p_color = pal[["orange"]],
   p_family = "Lato",
-  p_size = 24,
+  p_size = 20,
   h_fill = pal[["lightgray"]],
   h_color = pal[["darkgray"]],
   filename = "rendered/quantrr.png",
