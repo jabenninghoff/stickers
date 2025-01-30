@@ -1,3 +1,7 @@
+# stickers 1.3.1
+
+* Maintenance updates
+
 # stickers 1.3.0
 
 * Adds source code for generating [quantrr](https://jabenninghoff.github.io/quantrr/) sticker
