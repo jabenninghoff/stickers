@@ -1,3 +1,7 @@
+# stickers 1.3.3
+
+* Corrected GitHub language stats
+
 # stickers 1.3.2
 
 * Updated for R 4.5.0
