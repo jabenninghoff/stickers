@@ -243,12 +243,14 @@ Rendered file:
 
 Stickers image built with the `hexwall`
 [script](https://github.com/mitchelloharawild/hexwall/blob/f3e67a968d972bf6bc86923f0985ded464b7b8cd/hexwall.R).
-Because `hexwall()` uses a white background, the sticker background is also white. The border and
-title are [Royal Blue](https://color-register.org/color/royal-blue).
+The sticker background is a neutral white. The border and title are
+[Royal Blue](https://color-register.org/color/royal-blue).
 
 ```r
 hexwall("analysis/rendered", sticker_row_size = 2)
 ```
+
+The `hexwall.png` file was edited to change the white background to transparent.
 
 ```{r}
 #| label: stickers
