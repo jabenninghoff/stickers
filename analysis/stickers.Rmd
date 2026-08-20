@@ -70,7 +70,7 @@ sticker(
 
 Rendered file:
 
-![](rendered/rdev.png)
+![](rendered/rdev.png "rdev infinity hex sticker")
 
 # jbplot
 
@@ -122,7 +122,7 @@ sticker(
 
 Rendered file:
 
-![](rendered/jbplot_v1.png)
+![](rendered/jbplot_v1.png "jblot three colored lines hex sticker")
 
 While this version is OK, it's strangely unsatisfying.
 
@@ -160,7 +160,7 @@ sticker(
 
 Rendered file:
 
-![](rendered/jbplot.png)
+![](rendered/jbplot.png "jbplot three color donut plot hex sticker")
 
 The second version is more satisfying.
 
@@ -204,7 +204,7 @@ sticker(
 
 Rendered file:
 
-![](rendered/cards.png)
+![](rendered/cards.png "cards four aces king hex sticker")
 
 # quantrr
 
@@ -237,7 +237,7 @@ sticker(
 
 Rendered file:
 
-![](rendered/quantrr.png)
+![](rendered/quantrr.png "quantrr Q hex sticker")
 
 # stickers
 
@@ -271,4 +271,4 @@ sticker(
 
 Rendered file:
 
-![](rendered/stickers.png)
+![](rendered/stickers.png "stickers hexwall hex sticker")
