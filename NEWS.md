@@ -1,3 +1,7 @@
+# stickers 1.3.4
+
+* Initial upkeep using `use_upkeep_issue()`
+
 # stickers 1.3.3
 
 * Corrected GitHub language stats
