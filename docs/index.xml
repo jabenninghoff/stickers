@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>stickers</title>
+<link>https://jabenninghoff.github.io/stickers/</link>
+<atom:link href="https://jabenninghoff.github.io/stickers/index.xml" rel="self" type="application/rss+xml"/>
+<description>Source code used to generate Hex Stickers for my R packages.</description>
+<language>en-us</language>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Wed, 01 Feb 2023 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hex Stickers</title>
+  <dc:creator>John Benninghoff</dc:creator>
+  <link>https://jabenninghoff.github.io/stickers/analysis/stickers.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Source code used to generate Hex Stickers for my R packages, using <a href="https://github.com/GuangchuangYu/hexSticker">hexSticker</a>.</p>
+<p>Requires imageMagick, run: <code>brew install imagemagick</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(hexSticker)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(showtext)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyr)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(jbplot)</span></code></pre></div></div>
+</div>
+<p>I used <a href="https://github.com/ryansafner/hexstickers" class="uri">https://github.com/ryansafner/hexstickers</a> as a reference to help get started with hexStickers.</p>
+<section id="rdev" class="level2">
+<h2 class="anchored" data-anchor-id="rdev">rdev</h2>
+<p>Sticker for <a href="https://jabenninghoff.github.io/rdev/">rdev</a>.</p>
+<p>Uses a modified version of the Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:Infinity_in_circle.svg">Infinity in circle</a> symbol to represent <a href="https://en.wikipedia.org/wiki/DevOps_toolchain">DevOps</a>. The fill color is <a href="https://hextoral.com/hex-color/eac234/federal-std-595c/">OSHA safety yellow</a>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">font_add_google</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>)</span>
+<span id="cb2-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># </span><span class="al" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">TODO</span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">: understand why setting dpi = 600 and not dpi = 1200 correctly sizes the font</span></span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">showtext_opts</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">600</span>)</span>
+<span id="cb2-4"></span>
+<span id="cb2-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sticker</span>(</span>
+<span id="cb2-6">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"assets/infinity.png"</span>,</span>
+<span id="cb2-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb2-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span>,</span>
+<span id="cb2-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>,</span>
+<span id="cb2-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_height =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>,</span>
+<span id="cb2-11">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">package =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rdev"</span>,</span>
+<span id="cb2-12">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"black"</span>,</span>
+<span id="cb2-13">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>,</span>
+<span id="cb2-14">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">28</span>,</span>
+<span id="cb2-15">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#EAC234"</span>,</span>
+<span id="cb2-16">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"black"</span>,</span>
+<span id="cb2-17">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rendered/rdev.png"</span>,</span>
+<span id="cb2-18">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1200</span></span>
+<span id="cb2-19">)</span></code></pre></div></div>
+</div>
+<p>Rendered file:</p>
+<p><img src="https://jabenninghoff.github.io/stickers/analysis/rendered/rdev.png" title="rdev infinity hex sticker" class="img-fluid"></p>
+</section>
+<section id="jbplot" class="level2">
+<h2 class="anchored" data-anchor-id="jbplot">jbplot</h2>
+<p>Sticker for <a href="https://jabenninghoff.github.io/jbplot/">jbplot</a>.</p>
+<section id="first-version" class="level3">
+<h3 class="anchored" data-anchor-id="first-version">First Version</h3>
+<p>The background of the sticker is a line plot with three colors using the <a href="https://sjmgarnier.github.io/viridis/">viridis</a> color map.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">j_series <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>)</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">jbplot_v1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(</span>
+<span id="cb3-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">observation =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>,</span>
+<span id="cb3-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group_a =</span> j_series <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb3-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group_b =</span> j_series <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb3-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group_c =</span> j_series <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
+<span id="cb3-8">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pivot_longer</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>observation, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names_to =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"group"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> observation, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> value, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> group)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-15">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_x_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-16">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">limits =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-17">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_viridis_d</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_quo</span>()</span>
+<span id="cb3-19"></span>
+<span id="cb3-20"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sticker</span>(</span>
+<span id="cb3-21">  jbplot_v1,</span>
+<span id="cb3-22">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb3-23">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_y =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb3-24">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb3-25">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_height =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.15</span>,</span>
+<span id="cb3-26">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">package =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"jbplot"</span>,</span>
+<span id="cb3-27">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray50"</span>,</span>
+<span id="cb3-28">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>,</span>
+<span id="cb3-29">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>,</span>
+<span id="cb3-30">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>,</span>
+<span id="cb3-31">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"black"</span>,</span>
+<span id="cb3-32">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">white_around_sticker =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb3-33">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rendered/jbplot_v1.png"</span>,</span>
+<span id="cb3-34">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1200</span></span>
+<span id="cb3-35">)</span></code></pre></div></div>
+</div>
+<p>Rendered file:</p>
+<p><img src="https://jabenninghoff.github.io/stickers/analysis/rendered/jbplot_v1.png" title="jblot three colored lines hex sticker" class="img-fluid"></p>
+<p>While this version is OK, it’s strangely unsatisfying.</p>
+</section>
+<section id="second-version" class="level3">
+<h3 class="anchored" data-anchor-id="second-version">Second Version</h3>
+<p>The second version uses a jbplot <a href="https://jabenninghoff.github.io/jbplot/reference/ggplot_donut.html"><code>ggplot_donut()</code></a> plot with the <a href="https://sjmgarnier.github.io/viridis/">viridis</a> color map.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">jbplot <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"B"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"C"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">n =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stringsAsFactors =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb4-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot_donut</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hsize =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_viridis_d</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_transparent</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.background =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_rect</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>))</span>
+<span id="cb4-7"></span>
+<span id="cb4-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sticker</span>(</span>
+<span id="cb4-9">  jbplot,</span>
+<span id="cb4-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_x =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.983</span>,</span>
+<span id="cb4-11">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>,</span>
+<span id="cb4-12">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>,</span>
+<span id="cb4-13">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_height =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>,</span>
+<span id="cb4-14">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">package =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"jbplot"</span>,</span>
+<span id="cb4-15">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray25"</span>,</span>
+<span id="cb4-16">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>,</span>
+<span id="cb4-17">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">22</span>,</span>
+<span id="cb4-18">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>,</span>
+<span id="cb4-19">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gray50"</span>,</span>
+<span id="cb4-20">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rendered/jbplot.png"</span>,</span>
+<span id="cb4-21">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1200</span></span>
+<span id="cb4-22">)</span></code></pre></div></div>
+</div>
+<p>Rendered file:</p>
+<p><img src="https://jabenninghoff.github.io/stickers/analysis/rendered/jbplot.png" title="jbplot three color donut plot hex sticker" class="img-fluid"></p>
+<p>The second version is more satisfying.</p>
+</section>
+</section>
+<section id="cards" class="level2">
+<h2 class="anchored" data-anchor-id="cards">cards</h2>
+<p>Sticker for <a href="https://jabenninghoff.github.io/cards/">cards</a>. Uses ggplot2 text annotations with <a href="https://en.wikipedia.org/wiki/Playing_cards_in_Unicode">unicode card suits</a>. The background is <a href="https://color-register.org/color/poker-green">Poker Green</a> and the border is <a href="https://color-register.org/color/dark-wood">Dark Wood</a>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">c_size <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span></span>
+<span id="cb5-2">cards <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">annotate</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A\u2663"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> c_size) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">annotate</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A\u2666"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> c_size, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">annotate</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A\u2665"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> c_size, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">annotate</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A\u2660"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> c_size) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">annotate</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"K\u2663"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> c_size) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_x_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">limits =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.75</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_void</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_transparent</span>()</span>
+<span id="cb5-11"></span>
+<span id="cb5-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sticker</span>(</span>
+<span id="cb5-13">  cards,</span>
+<span id="cb5-14">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb5-15">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.65</span>,</span>
+<span id="cb5-16">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb5-17">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_height =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb5-18">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">package =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cards"</span>,</span>
+<span id="cb5-19">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.2</span>,</span>
+<span id="cb5-20">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#FFFFFF"</span>,</span>
+<span id="cb5-21">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>,</span>
+<span id="cb5-22">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">22</span>,</span>
+<span id="cb5-23">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#35654D"</span>,</span>
+<span id="cb5-24">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#855E42"</span>,</span>
+<span id="cb5-25">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rendered/cards.png"</span>,</span>
+<span id="cb5-26">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1200</span></span>
+<span id="cb5-27">)</span></code></pre></div></div>
+</div>
+<p>Rendered file:</p>
+<p><img src="https://jabenninghoff.github.io/stickers/analysis/rendered/cards.png" title="cards four aces king hex sticker" class="img-fluid"></p>
+</section>
+<section id="quantrr" class="level2">
+<h2 class="anchored" data-anchor-id="quantrr">quantrr</h2>
+<p>Sticker for <a href="https://jabenninghoff.github.io/quantrr/">quantrr</a>. Features an uppercase “Q” in the <a href="https://www.1001fonts.com/metropolis-font.html">Metropolis</a> font, rendered as a <code>.png</code> since Metropolis isn’t in Google Fonts. Blue Q, orange text, with a dark gray border and light gray background.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">pal <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> jbplot<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span>differently_palettes<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>primary</span>
+<span id="cb6-2"></span>
+<span id="cb6-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sticker</span>(</span>
+<span id="cb6-4">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"assets/q-logo.png"</span>,</span>
+<span id="cb6-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb6-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.3</span>,</span>
+<span id="cb6-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>,</span>
+<span id="cb6-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_height =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>,</span>
+<span id="cb6-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">package =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"quantrr"</span>,</span>
+<span id="cb6-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span>,</span>
+<span id="cb6-11">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_color =</span> pal[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"orange"</span>]],</span>
+<span id="cb6-12">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>,</span>
+<span id="cb6-13">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>,</span>
+<span id="cb6-14">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_fill =</span> pal[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lightgray"</span>]],</span>
+<span id="cb6-15">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_color =</span> pal[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"darkgray"</span>]],</span>
+<span id="cb6-16">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rendered/quantrr.png"</span>,</span>
+<span id="cb6-17">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1200</span></span>
+<span id="cb6-18">)</span></code></pre></div></div>
+</div>
+<p>Rendered file:</p>
+<p><img src="https://jabenninghoff.github.io/stickers/analysis/rendered/quantrr.png" title="quantrr Q hex sticker" class="img-fluid"></p>
+</section>
+<section id="stickers" class="level2">
+<h2 class="anchored" data-anchor-id="stickers">stickers</h2>
+<p>Stickers image built with the <code>hexwall</code> <a href="https://github.com/mitchelloharawild/hexwall/blob/f3e67a968d972bf6bc86923f0985ded464b7b8cd/hexwall.R">script</a>. The sticker background is a neutral white. The border and title are <a href="https://color-register.org/color/royal-blue">Royal Blue</a>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hexwall</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"analysis/rendered"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sticker_row_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span></code></pre></div></div>
+<p>The <code>hexwall.png</code> file was edited to change the white background to transparent.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sticker</span>(</span>
+<span id="cb8-2">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"assets/hexwall.png"</span>,</span>
+<span id="cb8-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_x =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span id="cb8-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_y =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.625</span>,</span>
+<span id="cb8-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.4</span>,</span>
+<span id="cb8-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">s_height =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.4</span>,</span>
+<span id="cb8-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">package =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"stickers"</span>,</span>
+<span id="cb8-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#2B60DE"</span>,</span>
+<span id="cb8-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_family =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lato"</span>,</span>
+<span id="cb8-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">p_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>,</span>
+<span id="cb8-11">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"white"</span>,</span>
+<span id="cb8-12">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h_color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#2B60DE"</span>,</span>
+<span id="cb8-13">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rendered/stickers.png"</span>,</span>
+<span id="cb8-14">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dpi =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1200</span></span>
+<span id="cb8-15">)</span></code></pre></div></div>
+</div>
+<p>Rendered file:</p>
+<p><img src="https://jabenninghoff.github.io/stickers/analysis/rendered/stickers.png" title="stickers hexwall hex sticker" class="img-fluid"></p>
+
+
+</section>
+
+ ]]></description>
+  <category>stickers</category>
+  <guid>https://jabenninghoff.github.io/stickers/analysis/stickers.html</guid>
+  <pubDate>Wed, 01 Feb 2023 06:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

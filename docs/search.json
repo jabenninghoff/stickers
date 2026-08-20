@@ -1,1 +1,201 @@
-[{"path":"https://jabenninghoff.github.io/stickers/LICENSE.html","id":null,"dir":"","previous_headings":"","what":"MIT License","title":"MIT License","text":"Copyright (c) 2024 John Benninghoff Permission hereby granted, free charge, person obtaining copy software associated documentation files (“Software”), deal Software without restriction, including without limitation rights use, copy, modify, merge, publish, distribute, sublicense, /sell copies Software, permit persons Software furnished , subject following conditions: copyright notice permission notice shall included copies substantial portions Software. SOFTWARE PROVIDED “”, WITHOUT WARRANTY KIND, EXPRESS IMPLIED, INCLUDING LIMITED WARRANTIES MERCHANTABILITY, FITNESS PARTICULAR PURPOSE NONINFRINGEMENT. EVENT SHALL AUTHORS COPYRIGHT HOLDERS LIABLE CLAIM, DAMAGES LIABILITY, WHETHER ACTION CONTRACT, TORT OTHERWISE, ARISING , CONNECTION SOFTWARE USE DEALINGS SOFTWARE.","code":""},{"path":"https://jabenninghoff.github.io/stickers/TODO.html","id":null,"dir":"","previous_headings":"","what":"TODO","title":"TODO","text":"Add TODO items ","code":""},{"path":"https://jabenninghoff.github.io/stickers/authors.html","id":null,"dir":"","previous_headings":"","what":"Authors","title":"Authors and Citation","text":"John Benninghoff. Author, maintainer.","code":""},{"path":"https://jabenninghoff.github.io/stickers/authors.html","id":"citation","dir":"","previous_headings":"","what":"Citation","title":"Authors and Citation","text":"Benninghoff J (2025). stickers: Hex Stickers R Packages. R package version 1.3.3, https://jabenninghoff.github.io/stickers/.","code":"@Manual{,   title = {stickers: Hex Stickers for R Packages},   author = {John Benninghoff},   year = {2025},   note = {R package version 1.3.3},   url = {https://jabenninghoff.github.io/stickers/}, }"},{"path":[]},{"path":"https://jabenninghoff.github.io/stickers/index.html","id":"overview","dir":"","previous_headings":"","what":"Overview","title":"Hex Stickers for R Packages","text":"Hex Stickers R Packages: Source code used generate Hex Stickers R packages. Feel free use /fork project!","code":""},{"path":"https://jabenninghoff.github.io/stickers/index.html","id":"notebooks","dir":"","previous_headings":"","what":"Notebooks","title":"Hex Stickers for R Packages","text":"Notebooks package: Hex Stickers (2023-02-01): Source code used generate Hex Stickers R packages, using hexSticker.","code":""},{"path":"https://jabenninghoff.github.io/stickers/index.html","id":"installation","dir":"","previous_headings":"","what":"Installation","title":"Hex Stickers for R Packages","text":"can install development version stickers GitHub : using renv:","code":"# install.packages(\"remotes\") remotes::install_github(\"jabenninghoff/stickers\") # install.packages(\"renv\") renv::install(\"jabenninghoff/stickers\")"},{"path":"https://jabenninghoff.github.io/stickers/index.html","id":"development","dir":"","previous_headings":"","what":"Development","title":"Hex Stickers for R Packages","text":"Changelog: See “Changelog” NEWS.md. Planned: TODO","code":""},{"path":"https://jabenninghoff.github.io/stickers/reference/stickers-package.html","id":null,"dir":"Reference","previous_headings":"","what":"stickers: Hex Stickers for R Packages — stickers-package","title":"stickers: Hex Stickers for R Packages — stickers-package","text":"Source code used generate Hex Stickers R packages.","code":""},{"path":[]},{"path":"https://jabenninghoff.github.io/stickers/reference/stickers-package.html","id":"author","dir":"Reference","previous_headings":"","what":"Author","title":"stickers: Hex Stickers for R Packages — stickers-package","text":"Maintainer: John Benninghoff jbenninghoff@mac.com (ORCID)","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-133","dir":"Changelog","previous_headings":"","what":"stickers 1.3.3","title":"stickers 1.3.3","text":"Corrected GitHub language stats","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-132","dir":"Changelog","previous_headings":"","what":"stickers 1.3.2","title":"stickers 1.3.2","text":"Updated R 4.5.0","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-131","dir":"Changelog","previous_headings":"","what":"stickers 1.3.1","title":"stickers 1.3.1","text":"Maintenance updates","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-130","dir":"Changelog","previous_headings":"","what":"stickers 1.3.0","title":"stickers 1.3.0","text":"Adds source code generating quantrr sticker","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-125","dir":"Changelog","previous_headings":"","what":"stickers 1.2.5","title":"stickers 1.2.5","text":"Updated R 4.4.0","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-124","dir":"Changelog","previous_headings":"","what":"stickers 1.2.4","title":"stickers 1.2.4","text":"Maintenance updates","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-123","dir":"Changelog","previous_headings":"","what":"stickers 1.2.3","title":"stickers 1.2.3","text":"Maintenance updates","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-122","dir":"Changelog","previous_headings":"","what":"stickers 1.2.2","title":"stickers 1.2.2","text":"Maintenance updates","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-121","dir":"Changelog","previous_headings":"","what":"stickers 1.2.1","title":"stickers 1.2.1","text":"Maintenance updates","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-120","dir":"Changelog","previous_headings":"","what":"stickers 1.2.0","title":"stickers 1.2.0","text":"Adds source code generating cards sticker Increase size donut plot jbplot sticker Adds source code generating “stickers” sticker","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-110","dir":"Changelog","previous_headings":"","what":"stickers 1.1.0","title":"stickers 1.1.0","text":"Adds source code generating jbplot sticker","code":""},{"path":"https://jabenninghoff.github.io/stickers/news/index.html","id":"stickers-100","dir":"Changelog","previous_headings":"","what":"stickers 1.0.0","title":"stickers 1.0.0","text":"Initial Release. Includes source code generating Hex Stickers : rdev","code":""}]
+[
+  {
+    "objectID": "changelog.html",
+    "href": "changelog.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "Initial upkeep using use_upkeep_issue()\nSwitch from analysis to Quarto site"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.4.0",
+    "href": "changelog.html#stickers-1.4.0",
+    "title": "Changelog",
+    "section": "",
+    "text": "Initial upkeep using use_upkeep_issue()\nSwitch from analysis to Quarto site"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.3.3",
+    "href": "changelog.html#stickers-1.3.3",
+    "title": "Changelog",
+    "section": "stickers 1.3.3",
+    "text": "stickers 1.3.3\n\nCorrected GitHub language stats"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.3.2",
+    "href": "changelog.html#stickers-1.3.2",
+    "title": "Changelog",
+    "section": "stickers 1.3.2",
+    "text": "stickers 1.3.2\n\nUpdated for R 4.5.0"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.3.1",
+    "href": "changelog.html#stickers-1.3.1",
+    "title": "Changelog",
+    "section": "stickers 1.3.1",
+    "text": "stickers 1.3.1\n\nMaintenance updates"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.3.0",
+    "href": "changelog.html#stickers-1.3.0",
+    "title": "Changelog",
+    "section": "stickers 1.3.0",
+    "text": "stickers 1.3.0\n\nAdds source code for generating quantrr sticker"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.2.5",
+    "href": "changelog.html#stickers-1.2.5",
+    "title": "Changelog",
+    "section": "stickers 1.2.5",
+    "text": "stickers 1.2.5\n\nUpdated for R 4.4.0"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.2.4",
+    "href": "changelog.html#stickers-1.2.4",
+    "title": "Changelog",
+    "section": "stickers 1.2.4",
+    "text": "stickers 1.2.4\n\nMaintenance updates"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.2.3",
+    "href": "changelog.html#stickers-1.2.3",
+    "title": "Changelog",
+    "section": "stickers 1.2.3",
+    "text": "stickers 1.2.3\n\nMaintenance updates"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.2.2",
+    "href": "changelog.html#stickers-1.2.2",
+    "title": "Changelog",
+    "section": "stickers 1.2.2",
+    "text": "stickers 1.2.2\n\nMaintenance updates"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.2.1",
+    "href": "changelog.html#stickers-1.2.1",
+    "title": "Changelog",
+    "section": "stickers 1.2.1",
+    "text": "stickers 1.2.1\n\nMaintenance updates"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.2.0",
+    "href": "changelog.html#stickers-1.2.0",
+    "title": "Changelog",
+    "section": "stickers 1.2.0",
+    "text": "stickers 1.2.0\n\nAdds source code for generating cards sticker\nIncrease size of donut plot in jbplot sticker\nAdds source code for generating “stickers” sticker"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.1.0",
+    "href": "changelog.html#stickers-1.1.0",
+    "title": "Changelog",
+    "section": "stickers 1.1.0",
+    "text": "stickers 1.1.0\n\nAdds source code for generating jbplot sticker"
+  },
+  {
+    "objectID": "changelog.html#stickers-1.0.0",
+    "href": "changelog.html#stickers-1.0.0",
+    "title": "Changelog",
+    "section": "stickers 1.0.0",
+    "text": "stickers 1.0.0\nInitial Release. Includes source code for generating Hex Stickers for:\n\nrdev"
+  },
+  {
+    "objectID": "TODO.html",
+    "href": "TODO.html",
+    "title": "TODO",
+    "section": "",
+    "text": "TODO\n\nAdd TODO items here"
+  },
+  {
+    "objectID": "analysis/stickers.html",
+    "href": "analysis/stickers.html",
+    "title": "Hex Stickers",
+    "section": "",
+    "text": "Source code used to generate Hex Stickers for my R packages, using hexSticker.\nRequires imageMagick, run: brew install imagemagick.\nlibrary(hexSticker)\nlibrary(showtext)\nlibrary(tidyr)\nlibrary(ggplot2)\nlibrary(jbplot)\nI used https://github.com/ryansafner/hexstickers as a reference to help get started with hexStickers.",
+    "crumbs": [
+      "Changelog",
+      "Hex Stickers"
+    ]
+  },
+  {
+    "objectID": "analysis/stickers.html#rdev",
+    "href": "analysis/stickers.html#rdev",
+    "title": "Hex Stickers",
+    "section": "rdev",
+    "text": "rdev\nSticker for rdev.\nUses a modified version of the Wikimedia Commons Infinity in circle symbol to represent DevOps. The fill color is OSHA safety yellow.\n\nfont_add_google(\"Lato\")\n# TODO: understand why setting dpi = 600 and not dpi = 1200 correctly sizes the font\nshowtext_opts(dpi = 600)\n\nsticker(\n  \"assets/infinity.png\",\n  s_x = 1,\n  s_y = 0.7,\n  s_width = 0.5,\n  s_height = 0.5,\n  package = \"rdev\",\n  p_color = \"black\",\n  p_family = \"Lato\",\n  p_size = 28,\n  h_fill = \"#EAC234\",\n  h_color = \"black\",\n  filename = \"rendered/rdev.png\",\n  dpi = 1200\n)\n\nRendered file:",
+    "crumbs": [
+      "Changelog",
+      "Hex Stickers"
+    ]
+  },
+  {
+    "objectID": "analysis/stickers.html#jbplot",
+    "href": "analysis/stickers.html#jbplot",
+    "title": "Hex Stickers",
+    "section": "jbplot",
+    "text": "jbplot\nSticker for jbplot.\n\nFirst Version\nThe background of the sticker is a line plot with three colors using the viridis color map.\n\nj_series &lt;- c(1, 2, 3, 4, 5, 4, 5, 6, 7, 8)\n\njbplot_v1 &lt;- data.frame(\n  observation = 1:10,\n  group_a = j_series - 1,\n  group_b = j_series + 1,\n  group_c = j_series + 3\n) |&gt;\n  pivot_longer(!observation, names_to = \"group\") |&gt;\n  ggplot(aes(x = observation, y = value, color = group)) +\n  geom_line() +\n  geom_point() +\n  labs(x = NULL, y = NULL) +\n  guides(color = \"none\") +\n  scale_x_continuous(labels = NULL) +\n  scale_y_continuous(limits = c(-1, 12), labels = NULL) +\n  scale_color_viridis_d() +\n  theme_quo()\n\nsticker(\n  jbplot_v1,\n  s_x = 1,\n  s_y = 1,\n  s_width = 2,\n  s_height = 2.15,\n  package = \"jbplot\",\n  p_color = \"gray50\",\n  p_family = \"Lato\",\n  p_size = 24,\n  h_fill = \"white\",\n  h_color = \"black\",\n  white_around_sticker = TRUE,\n  filename = \"rendered/jbplot_v1.png\",\n  dpi = 1200\n)\n\nRendered file:\n\nWhile this version is OK, it’s strangely unsatisfying.\n\n\nSecond Version\nThe second version uses a jbplot ggplot_donut() plot with the viridis color map.\n\njbplot &lt;- data.frame(group = c(\"A\", \"B\", \"C\"), n = c(4, 3, 2), stringsAsFactors = FALSE) |&gt;\n  ggplot_donut(hsize = 4) +\n  scale_fill_viridis_d() +\n  guides(fill = \"none\") +\n  theme_transparent() +\n  theme(plot.background = element_rect(linewidth = 0))\n\nsticker(\n  jbplot,\n  s_x = 0.983,\n  s_y = 0.6,\n  s_width = 1.1,\n  s_height = 1.1,\n  package = \"jbplot\",\n  p_color = \"gray25\",\n  p_family = \"Lato\",\n  p_size = 22,\n  h_fill = \"white\",\n  h_color = \"gray50\",\n  filename = \"rendered/jbplot.png\",\n  dpi = 1200\n)\n\nRendered file:\n\nThe second version is more satisfying.",
+    "crumbs": [
+      "Changelog",
+      "Hex Stickers"
+    ]
+  },
+  {
+    "objectID": "analysis/stickers.html#cards",
+    "href": "analysis/stickers.html#cards",
+    "title": "Hex Stickers",
+    "section": "cards",
+    "text": "cards\nSticker for cards. Uses ggplot2 text annotations with unicode card suits. The background is Poker Green and the border is Dark Wood.\n\nc_size &lt;- 9\ncards &lt;- ggplot() +\n  annotate(\"text\", x = 1, y = 0, label = \"A\\u2663\", size = c_size) +\n  annotate(\"text\", x = 2, y = 0, label = \"A\\u2666\", size = c_size, color = \"red\") +\n  annotate(\"text\", x = 3, y = 0, label = \"A\\u2665\", size = c_size, color = \"red\") +\n  annotate(\"text\", x = 4, y = 0, label = \"A\\u2660\", size = c_size) +\n  annotate(\"text\", x = 5, y = 0, label = \"K\\u2663\", size = c_size) +\n  scale_x_continuous(limits = c(0.25, 5.75)) +\n  theme_void() +\n  theme_transparent()\n\nsticker(\n  cards,\n  s_x = 1,\n  s_y = 0.65,\n  s_width = 2,\n  s_height = 2,\n  package = \"cards\",\n  p_y = 1.2,\n  p_color = \"#FFFFFF\",\n  p_family = \"Lato\",\n  p_size = 22,\n  h_fill = \"#35654D\",\n  h_color = \"#855E42\",\n  filename = \"rendered/cards.png\",\n  dpi = 1200\n)\n\nRendered file:",
+    "crumbs": [
+      "Changelog",
+      "Hex Stickers"
+    ]
+  },
+  {
+    "objectID": "analysis/stickers.html#quantrr",
+    "href": "analysis/stickers.html#quantrr",
+    "title": "Hex Stickers",
+    "section": "quantrr",
+    "text": "quantrr\nSticker for quantrr. Features an uppercase “Q” in the Metropolis font, rendered as a .png since Metropolis isn’t in Google Fonts. Blue Q, orange text, with a dark gray border and light gray background.\n\npal &lt;- jbplot::differently_palettes$primary\n\nsticker(\n  \"assets/q-logo.png\",\n  s_x = 1,\n  s_y = 1.3,\n  s_width = 0.5,\n  s_height = 0.5,\n  package = \"quantrr\",\n  p_y = 0.7,\n  p_color = pal[[\"orange\"]],\n  p_family = \"Lato\",\n  p_size = 20,\n  h_fill = pal[[\"lightgray\"]],\n  h_color = pal[[\"darkgray\"]],\n  filename = \"rendered/quantrr.png\",\n  dpi = 1200\n)\n\nRendered file:",
+    "crumbs": [
+      "Changelog",
+      "Hex Stickers"
+    ]
+  },
+  {
+    "objectID": "analysis/stickers.html#stickers",
+    "href": "analysis/stickers.html#stickers",
+    "title": "Hex Stickers",
+    "section": "stickers",
+    "text": "stickers\nStickers image built with the hexwall script. The sticker background is a neutral white. The border and title are Royal Blue.\nhexwall(\"analysis/rendered\", sticker_row_size = 2)\nThe hexwall.png file was edited to change the white background to transparent.\n\nsticker(\n  \"assets/hexwall.png\",\n  s_x = 1,\n  s_y = 0.625,\n  s_width = 0.4,\n  s_height = 0.4,\n  package = \"stickers\",\n  p_color = \"#2B60DE\",\n  p_family = \"Lato\",\n  p_size = 18,\n  h_fill = \"white\",\n  h_color = \"#2B60DE\",\n  filename = \"rendered/stickers.png\",\n  dpi = 1200\n)\n\nRendered file:",
+    "crumbs": [
+      "Changelog",
+      "Hex Stickers"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "MIT License",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2026 John Benninghoff\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
+    "objectID": "NEWS.html",
+    "href": "NEWS.html",
+    "title": "stickers 1.4.0",
+    "section": "",
+    "text": "stickers 1.4.0\n\nInitial upkeep using use_upkeep_issue()\nSwitch from analysis to Quarto site\n\n\n\nstickers 1.3.3\n\nCorrected GitHub language stats\n\n\n\nstickers 1.3.2\n\nUpdated for R 4.5.0\n\n\n\nstickers 1.3.1\n\nMaintenance updates\n\n\n\nstickers 1.3.0\n\nAdds source code for generating quantrr sticker\n\n\n\nstickers 1.2.5\n\nUpdated for R 4.4.0\n\n\n\nstickers 1.2.4\n\nMaintenance updates\n\n\n\nstickers 1.2.3\n\nMaintenance updates\n\n\n\nstickers 1.2.2\n\nMaintenance updates\n\n\n\nstickers 1.2.1\n\nMaintenance updates\n\n\n\nstickers 1.2.0\n\nAdds source code for generating cards sticker\nIncrease size of donut plot in jbplot sticker\nAdds source code for generating “stickers” sticker\n\n\n\nstickers 1.1.0\n\nAdds source code for generating jbplot sticker\n\n\n\nstickers 1.0.0\nInitial Release. Includes source code for generating Hex Stickers for:\n\nrdev"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "stickers",
+    "section": "",
+    "text": "Hex Stickers for R Packages: Source code used to generate Hex Stickers for my R packages.\nFeel free to use and/or fork this project!"
+  },
+  {
+    "objectID": "index.html#notebooks",
+    "href": "index.html#notebooks",
+    "title": "stickers",
+    "section": "Notebooks",
+    "text": "Notebooks\nNotebooks in this package:"
+  }
+]

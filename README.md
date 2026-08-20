@@ -20,7 +20,8 @@ Feel free to use and/or fork this project!
 
 Notebooks in this package:
 
-- [Hex Stickers](https://jabenninghoff.github.io/stickers/stickers.html)
+- [Hex
+  Stickers](https://jabenninghoff.github.io/stickers/analysis/stickers.html)
   (2023-02-01): Source code used to generate Hex Stickers for my R
   packages, using
   [hexSticker](https://github.com/GuangchuangYu/hexSticker).
