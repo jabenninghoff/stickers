@@ -7,7 +7,7 @@ meta:
 logo:
   images:
     full:
-      path: logo.png
+      path: man/figures/logo.png
       alt: "Stickers Logo"
   small: full
   medium: full
