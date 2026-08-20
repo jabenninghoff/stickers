@@ -2,7 +2,7 @@
 title: "Hex Stickers"
 author: "John Benninghoff"
 date: '2023-02-01'
-date-modified: '2024-11-16'
+date-modified: '2026-08-20'
 categories: [stickers]
 order: 101
 output:
