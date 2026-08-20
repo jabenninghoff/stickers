@@ -1,0 +1,14 @@
+# https://quarto.org/docs/authoring/brand.html
+
+meta:
+  name: Stickers
+  link: https://jabenninghoff.github.io/stickers/
+
+logo:
+  images:
+    full:
+      path: logo.png
+      alt: "Stickers Logo"
+  small: full
+  medium: full
+  large: full
