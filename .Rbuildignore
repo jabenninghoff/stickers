@@ -1,8 +1,11 @@
+^_freeze$
 ^_pkgdown\.yml$
 ^\.claude$
 ^\.github$
 ^\.lintr$
+^\.nojekyll$
 ^\.positai$
+^\.quarto$
 ^\.Rproj\.user$
 ^analysis/.*-figure$
 ^analysis/.*\.docx$
@@ -18,4 +21,3 @@
 ^renv\.lock$
 ^renv$
 ^stickers\.Rproj$
-^TODO\.md$

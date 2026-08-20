@@ -61,3 +61,5 @@ analysis/import
 analysis/rendered
 # RStudio 2026.04.0+526
 .positai
+/.quarto/
+**/*.quarto_ipynb
