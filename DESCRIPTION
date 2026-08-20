@@ -9,6 +9,8 @@ License: MIT + file LICENSE
 URL: https://jabenninghoff.github.io/stickers/,
     https://github.com/jabenninghoff/stickers
 BugReports: https://github.com/jabenninghoff/stickers/issues
+Depends: 
+    R (>= 4.1.0)
 Suggests: 
     desc,
     devtools,
@@ -32,6 +34,7 @@ Suggests:
 Remotes: 
     jabenninghoff/jbplot,
     jabenninghoff/rdev
+Config/rdev/last-upkeep: 2026-08-20
 Config/roxygen2/version: 8.1.0
 Config/testthat/edition: 3
 Encoding: UTF-8
