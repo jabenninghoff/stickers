@@ -1,6 +1,8 @@
-# stickers 1.3.4
+# stickers 1.4.0
 
 * Initial upkeep using `use_upkeep_issue()`
+
+* Switch from analysis to Quarto site
 
 # stickers 1.3.3
 
