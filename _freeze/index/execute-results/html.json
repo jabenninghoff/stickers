@@ -1,0 +1,15 @@
+{
+  "hash": "ef9b2d35b4eb8e63be59a429565ede9b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"stickers\"\nlisting:\n  type: default\n  contents: analysis\n  sort-ui: true\n  filter-ui: true\n  max-description-length: 500\n  date-format: iso\n  categories: true\n  feed:\n    items: 100\n    language: en-us\n---\n\n**Hex Stickers for R Packages:** Source code used to generate Hex Stickers for my R packages.\n\nFeel free to use and/or fork this project!\n\n\n::: {.cell}\n\n:::\n\n\n## Notebooks\n\nNotebooks in this package:\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
