@@ -1,3 +1,7 @@
+# stickers 1.4.1
+
+* Update R-CMD-check to run on macOS only
+
 # stickers 1.4.0
 
 * Initial upkeep using `rdev::use_upkeep_issue()`
