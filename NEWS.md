@@ -1,3 +1,7 @@
+# stickers 1.4.2
+
+* Maintenance updates
+
 # stickers 1.4.1
 
 * Update R-CMD-check to run on macOS only
