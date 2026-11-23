@@ -10,7 +10,7 @@
 <atom:link href="https://jabenninghoff.github.io/stickers/index.xml" rel="self" type="application/rss+xml"/>
 <description>Source code used to generate Hex Stickers for my R packages.</description>
 <language>en-us</language>
-<generator>quarto-1.10.18</generator>
+<generator>quarto-1.11.9</generator>
 <lastBuildDate>Wed, 01 Feb 2023 06:00:00 GMT</lastBuildDate>
 <item>
   <title>Hex Stickers</title>
